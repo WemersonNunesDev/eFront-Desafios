@@ -1,6 +1,8 @@
 :root {
     --distack: #846aff;
     --txt: #fff;
+    --border: #eeeeff;
+    --bcg: #f8f8ff;
 
     --text-rob: 'Roboto', sans-serif;
 }
@@ -12,7 +14,7 @@ body {
 header {
     width: 100%;
     min-height: 550px;
-    background-color: #f8f8ff;
+    background-color: var(--bcg);
     display: flex;
     justify-content: center;
 }
@@ -42,16 +44,20 @@ header {
 
 .header-text > p{
     font-size: 26px;
+    padding: 0;
 }
 
 .header-text > button{
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
     width: 214px;
-    padding: 16px 8px;
+    line-height: 21px;
+    padding: 14px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     color: var(--txt);
     background-color: var(--distack);
+    cursor: pointer;
 }
 
 .img-header {
@@ -73,15 +79,72 @@ main {
 
 .container > .grid {
     width: 100%;
-    margin: 180px 0;
+    margin-top: 140px;
+    margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 31.58% 31.58% 31.58%;
-    grid-template-rows: 350px 350px;
+    grid-template-columns: 384px 384px 384px;
+    grid-template-rows: 357px 357px;
     gap: 32px;
-    background-color: aqua;
 }
 
-.grid .post {
-    background-color: #846aff;
-    padding: 16px;
+.grid > .post {
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.grid .post > h1 {
+    font-size: 18px;
+}
+
+.post > h1, p {
+    padding-inline: 24px;
+}
+
+.post img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.form {
+    width: 100%;
+    background-color: var(--bcg);
+    display: flex;
+    justify-content: center;
+    padding-block: 80px;
+}
+
+.container-form {
+    width: 548px;
+    text-align: center;
+}
+
+.container-form h1{
+    margin-bottom: 32px;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container-form input, textarea, button {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 4px;
+}
+
+.container-form textarea {
+    height: 148px;
+}
+
+.container-form button {
+    font-weight: 700;
+    color: var(--txt);
+    background-color: var(--distack);
+    cursor: pointer;
 }

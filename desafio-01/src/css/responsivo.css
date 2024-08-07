@@ -1,0 +1,9 @@
+@media(max-width: 1920px) {
+    .container {
+        max-width: 1216px;
+    }
+
+    #conteudo {
+        max-width: 1216px;
+    }
+}
